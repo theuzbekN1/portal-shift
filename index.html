@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#101322">
+  <title>Portal Shift</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- YouTube Playables SDK -->
+  <script src="https://www.youtube.com/game_api/v1"></script>
+</head>
+<body>
+  <main class="game">
+    <header class="topbar">
+      <div>
+        <h1>PORTAL SHIFT</h1>
+        <p>Collect crystals. Reach the portal.</p>
+      </div>
+      <div class="stats">
+        <span>💎 <b id="score">0</b></span>
+        <span>Level <b id="level">1</b></span>
+      </div>
+    </header>
+
+    <div class="canvas-wrap">
+      <canvas id="board" width="800" height="500"
+              aria-label="Portal Shift game board"></canvas>
+      <div id="overlay" class="overlay">
+        <h2 id="overlay-title">Ready?</h2>
+        <p id="overlay-text">
+          Collect crystals and reach the portal!
+        </p>
+        <button id="start">START GAME</button>
+      </div>
+    </div>
+
+    <nav class="controls" aria-label="Game controls">
+      <button data-dir="up" aria-label="Move up">▲</button>
+      <div>
+        <button data-dir="left" aria-label="Move left">◀</button>
+        <button data-dir="down" aria-label="Move down">▼</button>
+        <button data-dir="right" aria-label="Move right">▶</button>
+      </div>
+    </nav>
+    <p class="hint">PC: WASD or Arrow Keys</p>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
